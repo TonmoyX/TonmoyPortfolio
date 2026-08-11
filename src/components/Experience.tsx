@@ -4,12 +4,23 @@ import { StaggerContainer, StaggerItem } from "./motion/Stagger";
 
 const EXPERIENCE = [
   {
+    title: "Junior Software Engineer",
+    company: "Dream Prospects",
+    date: "July 2026 - Present",
+    bullets: [
+      "Developed and maintained web applications using Django, Next.js, DotNet, and PostgreSQL, resulting in a 60% increase in user engagement.",
+      "Implemented RESTful APIs and integrated third-party services, enhancing application functionality and user experience.",
+      "Collaborated with cross-functional teams to design and implement new features, improving overall product quality and performance.",
+    ],
+  },
+  {
     title: "Web Developer As An Intern",
     company: "Digi5 LTD.",
     date: "September 2025 - January 2026",
     bullets: [
       "Led development of key features that increased user engagement by 65%",
       "Architected and implemented scalable frontend services using React.",
+      "Optimized backend services with Node.js and Express, improving response times by 40%.",
     ],
   },
   // {
