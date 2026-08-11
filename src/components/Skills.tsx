@@ -7,12 +7,17 @@ import {
   SiGithub,
   SiJavascript,
   SiMongodb,
+  SiNetlify,
   SiNextdotjs,
   SiNodedotjs,
+  SiPostgresql,
+  SiPostman,
+  SiPrisma,
   SiPython,
   SiReact,
   SiSublimetext,
   SiTailwindcss,
+  SiVercel,
 } from "react-icons/si";
 import { DiCss3Full, DiHtml5, DiJava, DiVisualstudio } from "react-icons/di";
 import { FaCode, FaDatabase, FaLayerGroup, FaToolbox } from "react-icons/fa6";
@@ -51,6 +56,8 @@ const CATEGORIES: { title: string; icon: IconType; skills: Skill[] }[] = [
       { name: "Node.js", Icon: SiNodedotjs, color: "#388E3C" },
       { name: "Express.js", Icon: SiExpress, color: "#212121" },
       { name: "MongoDB", Icon: SiMongodb, color: "#03F602" },
+      { name: "PostgreSQL", Icon: SiPostgresql, color: "#4169E1" },
+      { name: "Prisma", Icon: SiPrisma, color: "#2D3748" },
     ],
   },
   {
@@ -61,6 +68,9 @@ const CATEGORIES: { title: string; icon: IconType; skills: Skill[] }[] = [
       { name: "GitHub", Icon: SiGithub, color: "#181616" },
       { name: "VsCode", Icon: DiVisualstudio, color: "#0065A9" },
       { name: "Sublime Text", Icon: SiSublimetext, color: "#F89820" },
+      { name: "Postman", Icon: SiPostman, color: "#FF6C37" },
+      { name: "Vercel", Icon: SiVercel, color: "#000000" },
+      // { name: "Netlify", Icon: SiNetlify, color: "#00C7B7" },
     ],
   },
 ];
