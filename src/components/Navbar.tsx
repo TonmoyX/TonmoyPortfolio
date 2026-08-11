@@ -160,7 +160,7 @@ export default function Navbar() {
               alt="logo"
               width={220}
               height={60}
-              className="mt-1 w-[260px] sm:w-[320px] md:w-[350px]"
+              className="mt-1 h-auto w-[clamp(130px,38vw,350px)]"
             />
           </div>
           <button

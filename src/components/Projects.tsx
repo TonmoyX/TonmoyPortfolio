@@ -17,6 +17,8 @@ import { DiCss3Full, DiHtml5 } from "react-icons/di";
 import {
   SiDaisyui,
   SiExpress,
+  SiFramer,
+  SiHeroui,
   SiJavascript,
   SiJsonwebtokens,
   SiMongodb,
@@ -43,6 +45,8 @@ const TECH_ICON_MAP: Record<string, { Icon: IconType; color: string }> = {
   JWT: { Icon: SiJsonwebtokens, color: "#E2E8F0" },
   "REST API": { Icon: FaNetworkWired, color: "#4299E1" },
   "Tailwind CSS": { Icon: SiTailwindcss, color: "#38BDF8" },
+  "Framer Motion": { Icon: SiFramer, color: "#E2E8F0" },
+  HeroUI: { Icon: SiHeroui, color: "#000000" },
   DaisyUI: { Icon: SiDaisyui, color: "#A855F7" },
   "Shadcn/ui": { Icon: SiShadcnui, color: "#E2E8F0" },
   "Radix UI": { Icon: SiRadixui, color: "#E2E8F0" },
@@ -53,11 +57,11 @@ const PROJECTS = [
   {
     title: "HyperXion",
     image: "/images/HyperXion_Work.png",
-    stack: "Html • CSS • JS • Tailwind CSS • Next.js",
+    stack: "Next.js • React • Tailwind CSS • Framer Motion • HeroUI",
     description:
       "HyperXion is a comprehensive educational web platform exploring the cosmos, celestial bodies, and space exploration. Our mission is to democratize access to space science education, making complex astronomical concepts accessible to students of all levels. We aspire to inspire the next generation of astronomers and engineers while fostering scientific literacy and a deeper understanding of our place in the universe.",
-    live: "https://tonmoyx.github.io/HyperXion",
-    github: "https://github.com/TonmoyX/HyperXion",
+    live: "https://hyper-xion.vercel.app",
+    github: "https://github.com/TonmoyX/HyperXion-NewEdition",
   },
   {
     title: "Doctor Appointment",

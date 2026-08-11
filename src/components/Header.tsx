@@ -19,7 +19,7 @@ export default function Header() {
   return (
     <header className="relative flex min-h-[60vh] items-center overflow-hidden px-0 py-2.5 pt-24">
       <div className="relative mx-auto flex w-full max-w-6xl flex-col items-center gap-6 px-2.5 py-4 text-center md:flex-row md:justify-between md:gap-10 md:text-left">
-        <div className="flex-1">
+        <div className="min-w-0 flex-1">
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -39,7 +39,7 @@ export default function Header() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1, ease }}
-            className="animate-gradient-x mb-3 whitespace-nowrap bg-gradient-to-r from-heading via-accent to-heading bg-clip-text text-2xl font-bold text-transparent sm:text-5xl md:text-[60px]"
+            className="animate-gradient-x mb-3 bg-gradient-to-r from-heading via-accent to-heading bg-clip-text text-2xl font-bold text-transparent sm:whitespace-nowrap sm:text-5xl md:text-4xl lg:text-5xl xl:text-[60px]"
           >
             Morshed Alam Tonmoy
           </motion.h1>
@@ -84,9 +84,9 @@ export default function Header() {
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.15, ease }}
-          className="relative flex-1 md:ml-auto mt-5"
+          className="relative flex-none md:ml-auto mt-5"
         >
-          <div className="animate-float relative mx-auto h-[280px] w-[280px] sm:h-[220px] sm:w-[220px] md:h-[350px] md:w-[350px]">
+          <div className="animate-float relative mx-auto h-[280px] w-[280px] sm:h-[220px] sm:w-[220px] md:h-[240px] md:w-[240px] lg:h-[300px] lg:w-[300px] xl:h-[350px] xl:w-[350px]">
             <div className="animate-spin-slow absolute -inset-3 rounded-full bg-[conic-gradient(from_0deg,var(--color-accent),transparent_40%,var(--color-accent))] opacity-70" />
             <div className="absolute inset-0 overflow-hidden rounded-full border-[3px] border-ink bg-slate-50 shadow-[0_4px_6px_rgba(0,0,0,0.1)]">
               <Image
