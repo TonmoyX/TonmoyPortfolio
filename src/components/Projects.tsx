@@ -53,7 +53,7 @@ const PROJECTS = [
   {
     title: "HyperXion",
     image: "/images/HyperXion_Work.png",
-    stack: "Html • CSS • JS",
+    stack: "Html • CSS • JS • Tailwind CSS • Next.js",
     description:
       "HyperXion is a comprehensive educational web platform exploring the cosmos, celestial bodies, and space exploration. Our mission is to democratize access to space science education, making complex astronomical concepts accessible to students of all levels. We aspire to inspire the next generation of astronomers and engineers while fostering scientific literacy and a deeper understanding of our place in the universe.",
     live: "https://tonmoyx.github.io/HyperXion",
