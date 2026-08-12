@@ -57,15 +57,6 @@ const TECH_ICON_MAP: Record<string, { Icon: IconType; color: string }> = {
 
 const PROJECTS = [
   {
-    title: "HyperXion",
-    image: "/images/HyperXion_Work.png",
-    stack: "Next.js • React • Tailwind CSS • Framer Motion • HeroUI",
-    description:
-      "HyperXion is a comprehensive educational web platform exploring the cosmos, celestial bodies, and space exploration. Our mission is to democratize access to space science education, making complex astronomical concepts accessible to students of all levels. We aspire to inspire the next generation of astronomers and engineers while fostering scientific literacy and a deeper understanding of our place in the universe.",
-    live: "https://hyper-xion.vercel.app",
-    github: "https://github.com/TonmoyX/HyperXion-NewEdition",
-  },
-  {
     title: "Property Rental",
     image: "/images/PropRent.png",
     stack:
@@ -74,6 +65,15 @@ const PROJECTS = [
       "Property Rental is a full-stack, multi-role property rental platform where Admins, Owners, and Tenants can manage listings, browse properties, and complete bookings. Built with Next.js, React, and MongoDB, it features secure authentication via Better Auth, Stripe-powered payments, and a responsive, animated UI.",
     live: "https://property-rent-client.vercel.app",
     github: "https://github.com/TonmoyX/Property-Rent-Client",
+  },
+  {
+    title: "HyperXion",
+    image: "/images/HyperXion_Work.png",
+    stack: "Next.js • React • Tailwind CSS • Framer Motion • HeroUI",
+    description:
+      "HyperXion is a comprehensive educational web platform exploring the cosmos, celestial bodies, and space exploration. Our mission is to democratize access to space science education, making complex astronomical concepts accessible to students of all levels. We aspire to inspire the next generation of astronomers and engineers while fostering scientific literacy and a deeper understanding of our place in the universe.",
+    live: "https://hyper-xion.vercel.app",
+    github: "https://github.com/TonmoyX/HyperXion-NewEdition",
   },
   {
     title: "Doctor Appointment",
