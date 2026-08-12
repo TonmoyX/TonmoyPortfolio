@@ -27,6 +27,7 @@ import {
   SiRadixui,
   SiReact,
   SiShadcnui,
+  SiStripe,
   SiTailwindcss,
 } from "react-icons/si";
 import SectionTitle from "./SectionTitle";
@@ -51,6 +52,7 @@ const TECH_ICON_MAP: Record<string, { Icon: IconType; color: string }> = {
   "Shadcn/ui": { Icon: SiShadcnui, color: "#E2E8F0" },
   "Radix UI": { Icon: SiRadixui, color: "#E2E8F0" },
   "Better Auth": { Icon: FaLock, color: "#4299E1" },
+  Stripe: { Icon: SiStripe, color: "#635BFF" },
 };
 
 const PROJECTS = [
@@ -64,6 +66,16 @@ const PROJECTS = [
     github: "https://github.com/TonmoyX/HyperXion-NewEdition",
   },
   {
+    title: "Property Rental",
+    image: "/images/PropRent.png",
+    stack:
+      "Next.js • React • Tailwind CSS • HeroUI • MongoDB • Better Auth • Stripe • Framer Motion",
+    description:
+      "Property Rental is a full-stack, multi-role property rental platform where Admins, Owners, and Tenants can manage listings, browse properties, and complete bookings. Built with Next.js, React, and MongoDB, it features secure authentication via Better Auth, Stripe-powered payments, and a responsive, animated UI.",
+    live: "https://property-rent-client.vercel.app",
+    github: "https://github.com/TonmoyX/Property-Rent-Client",
+  },
+  {
     title: "Doctor Appointment",
     image: "/images/DocAppoint.png",
     stack:
@@ -73,16 +85,16 @@ const PROJECTS = [
     live: "https://docappoint-snowy.vercel.app",
     github: "https://github.com/TonmoyX/DocAppoint-client",
   },
-  {
-    title: "Dragon News",
-    image: "/images/DragonNewsWork.png",
-    stack:
-      "Next.js • React • Tailwind CSS • DaisyUI • Shadcn/ui • Radix UI • MongoDB • Better Auth",
-    description:
-      "A modern, full-stack news portal application built with cutting-edge web technologies. Dragon News provides a comprehensive platform for discovering, browsing, and reading news articles organized by category with user authentication and personalized content.",
-    live: "https://dragon-news-three-xi.vercel.app",
-    github: "https://github.com/TonmoyX/Dragon_News",
-  },
+  // {
+  //   title: "Dragon News",
+  //   image: "/images/DragonNewsWork.png",
+  //   stack:
+  //     "Next.js • React • Tailwind CSS • DaisyUI • Shadcn/ui • Radix UI • MongoDB • Better Auth",
+  //   description:
+  //     "A modern, full-stack news portal application built with cutting-edge web technologies. Dragon News provides a comprehensive platform for discovering, browsing, and reading news articles organized by category with user authentication and personalized content.",
+  //   live: "https://dragon-news-three-xi.vercel.app",
+  //   github: "https://github.com/TonmoyX/Dragon_News",
+  // },
 ];
 
 const MORE_PROJECTS = [
