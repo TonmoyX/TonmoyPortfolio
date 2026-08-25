@@ -84,7 +84,7 @@ body {
   }
 }
 .animate-orbit {
-  animation: orbit-spin 60s linear infinite;
+  animation: orbit-spin 80s linear infinite;
 }
 
 @keyframes orbit-counter-spin {

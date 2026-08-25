@@ -7,47 +7,6 @@ import RoleRotator from "./motion/RoleRotator";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-function IssIcon({ className = "" }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 120 48"
-      className={className}
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect x="14" y="22" width="36" height="4" fill="currentColor" />
-      <rect x="70" y="22" width="36" height="4" fill="currentColor" />
-      <rect x="48" y="14" width="24" height="20" rx="4" fill="currentColor" />
-      <rect
-        x="0"
-        y="4"
-        width="14"
-        height="40"
-        rx="1.5"
-        stroke="currentColor"
-        strokeWidth="2.4"
-      />
-      <line x1="7" y1="4" x2="7" y2="44" stroke="currentColor" strokeWidth="1.4" />
-      <line x1="0" y1="14" x2="14" y2="14" stroke="currentColor" strokeWidth="1.4" />
-      <line x1="0" y1="24" x2="14" y2="24" stroke="currentColor" strokeWidth="1.4" />
-      <line x1="0" y1="34" x2="14" y2="34" stroke="currentColor" strokeWidth="1.4" />
-      <rect
-        x="106"
-        y="4"
-        width="14"
-        height="40"
-        rx="1.5"
-        stroke="currentColor"
-        strokeWidth="2.4"
-      />
-      <line x1="113" y1="4" x2="113" y2="44" stroke="currentColor" strokeWidth="1.4" />
-      <line x1="106" y1="14" x2="120" y2="14" stroke="currentColor" strokeWidth="1.4" />
-      <line x1="106" y1="24" x2="120" y2="24" stroke="currentColor" strokeWidth="1.4" />
-      <line x1="106" y1="34" x2="120" y2="34" stroke="currentColor" strokeWidth="1.4" />
-    </svg>
-  );
-}
-
 const ROLES = [
   "Full Stack Developer",
   "Frontend Developer",
@@ -140,8 +99,14 @@ export default function Header() {
               />
             </div>
             <div className="animate-orbit pointer-events-none absolute -inset-10">
-              <span className="animate-orbit-counter absolute left-1/2 top-0 flex h-8 w-11 items-center justify-center text-ink-faint">
-                <IssIcon className="h-4 w-full" />
+              <span className="animate-orbit-counter absolute left-1/2 top-0 flex h-11 w-16 items-center justify-center">
+                <Image
+                  src="/images/ISS.png"
+                  alt="ISS"
+                  width={64}
+                  height={45}
+                  className="mix-blend-multiply brightness-150 contrast-125 saturate-150"
+                />
               </span>
             </div>
           </div>

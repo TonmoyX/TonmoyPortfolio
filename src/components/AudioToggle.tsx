@@ -59,14 +59,24 @@ async function togglePlay() {
   }
 }
 
+const INTERACTION_EVENTS = [
+  "pointerdown",
+  "touchstart",
+  "touchend",
+  "click",
+  "keydown",
+] as const;
+
 function waitForInteractionThenPlay(el: HTMLAudioElement) {
   const resume = () => {
     el.play().then(() => setPlaying(true)).catch(() => {});
-    window.removeEventListener("pointerdown", resume);
-    window.removeEventListener("keydown", resume);
+    for (const event of INTERACTION_EVENTS) {
+      window.removeEventListener(event, resume);
+    }
   };
-  window.addEventListener("pointerdown", resume, { once: true });
-  window.addEventListener("keydown", resume, { once: true });
+  for (const event of INTERACTION_EVENTS) {
+    window.addEventListener(event, resume, { once: true, passive: true });
+  }
 }
 
 function initAutoplay() {
