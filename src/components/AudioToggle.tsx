@@ -4,7 +4,8 @@ import { useEffect, useSyncExternalStore } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaMusic } from "react-icons/fa6";
 
-const AUDIO_SRC = "/audio/theme.m4a";
+// const AUDIO_SRC = "/audio/theme.m4a";
+const AUDIO_SRC = "/audio/theme-v2.m4a";
 const STORAGE_KEY = "bg-music-playing";
 
 let audio: HTMLAudioElement | null = null;
@@ -16,7 +17,7 @@ function getAudio() {
   if (!audio && typeof window !== "undefined") {
     audio = new Audio(AUDIO_SRC);
     audio.loop = true;
-    audio.volume = 0.35;
+    audio.volume = 0.65;
   }
   return audio;
 }
@@ -62,16 +63,29 @@ async function togglePlay() {
   }
 }
 
+function waitForInteractionThenPlay(el: HTMLAudioElement) {
+  const resume = () => {
+    el.play().then(() => setPlaying(true)).catch(() => {});
+    window.removeEventListener("pointerdown", resume);
+    window.removeEventListener("keydown", resume);
+  };
+  window.addEventListener("pointerdown", resume, { once: true });
+  window.addEventListener("keydown", resume, { once: true });
+}
+
 function initFromStorage() {
   if (initialized || typeof window === "undefined") return;
   initialized = true;
-  if (localStorage.getItem(STORAGE_KEY) === "1") {
-    const el = getAudio();
-    el?.play().then(
-      () => setPlaying(true),
-      () => setPlaying(false)
-    );
-  }
+
+  // User explicitly muted before — respect that choice, don't autoplay.
+  if (localStorage.getItem(STORAGE_KEY) === "0") return;
+
+  const el = getAudio();
+  if (!el) return;
+  el.play().then(
+    () => setPlaying(true),
+    () => waitForInteractionThenPlay(el)
+  );
 }
 
 function EqualizerBars() {
