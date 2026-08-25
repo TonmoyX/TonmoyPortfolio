@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion, type Variants } from "framer-motion";
 import { IoIosArrowDown } from "react-icons/io";
+import AudioToggle from "./AudioToggle";
 
 const NAV_LINKS = [
   { href: "#about", label: "About" },
@@ -163,28 +164,31 @@ export default function Navbar() {
               className="mt-1 h-auto w-[clamp(130px,38vw,350px)]"
             />
           </div>
-          <button
-            className="relative z-[101] flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 backdrop-blur-md transition-colors hover:bg-white/10 md:hidden"
-            aria-label={open ? "Close menu" : "Open menu"}
-            aria-expanded={open}
-            onClick={() => setOpen((o) => !o)}
-          >
-            <motion.span
-              animate={open ? { rotate: 45, y: 0 } : { rotate: 0, y: -6 }}
-              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className="absolute h-[2px] w-5 rounded-full bg-accent"
-            />
-            <motion.span
-              animate={open ? { opacity: 0, x: -8 } : { opacity: 1, x: 0 }}
-              transition={{ duration: 0.2 }}
-              className="absolute h-[2px] w-5 rounded-full bg-accent"
-            />
-            <motion.span
-              animate={open ? { rotate: -45, y: 0 } : { rotate: 0, y: 6 }}
-              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className="absolute h-[2px] w-5 rounded-full bg-accent"
-            />
-          </button>
+          <div className="flex items-center gap-3 md:hidden">
+            <button
+              className="relative z-[101] flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 backdrop-blur-md transition-colors hover:bg-white/10"
+              aria-label={open ? "Close menu" : "Open menu"}
+              aria-expanded={open}
+              onClick={() => setOpen((o) => !o)}
+            >
+              <motion.span
+                animate={open ? { rotate: 45, y: 0 } : { rotate: 0, y: -6 }}
+                transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                className="absolute h-[2px] w-5 rounded-full bg-accent"
+              />
+              <motion.span
+                animate={open ? { opacity: 0, x: -8 } : { opacity: 1, x: 0 }}
+                transition={{ duration: 0.2 }}
+                className="absolute h-[2px] w-5 rounded-full bg-accent"
+              />
+              <motion.span
+                animate={open ? { rotate: -45, y: 0 } : { rotate: 0, y: 6 }}
+                transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                className="absolute h-[2px] w-5 rounded-full bg-accent"
+              />
+            </button>
+            <AudioToggle className="z-[101]" />
+          </div>
           <div className="hidden items-center gap-7 md:flex">
             {PRIMARY_LINKS.map((link) => (
               <NavLink key={link.href} href={link.href}>
@@ -192,6 +196,7 @@ export default function Navbar() {
               </NavLink>
             ))}
             <MoreDropdown />
+            <AudioToggle />
           </div>
         </div>
       </nav>
