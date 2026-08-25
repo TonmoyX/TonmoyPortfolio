@@ -6,7 +6,6 @@ import { FaMusic } from "react-icons/fa6";
 
 // const AUDIO_SRC = "/audio/theme.m4a";
 const AUDIO_SRC = "/audio/theme-v2.m4a";
-const STORAGE_KEY = "bg-music-playing";
 
 let audio: HTMLAudioElement | null = null;
 let playing = false;
@@ -42,9 +41,6 @@ function getServerSnapshot() {
 function setPlaying(next: boolean) {
   playing = next;
   notify();
-  if (typeof window !== "undefined") {
-    localStorage.setItem(STORAGE_KEY, next ? "1" : "0");
-  }
 }
 
 async function togglePlay() {
@@ -73,12 +69,9 @@ function waitForInteractionThenPlay(el: HTMLAudioElement) {
   window.addEventListener("keydown", resume, { once: true });
 }
 
-function initFromStorage() {
+function initAutoplay() {
   if (initialized || typeof window === "undefined") return;
   initialized = true;
-
-  // User explicitly muted before — respect that choice, don't autoplay.
-  if (localStorage.getItem(STORAGE_KEY) === "0") return;
 
   const el = getAudio();
   if (!el) return;
@@ -113,7 +106,7 @@ export default function AudioToggle({ className = "" }: { className?: string }) 
   const isPlaying = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   useEffect(() => {
-    initFromStorage();
+    initAutoplay();
   }, []);
 
   return (
