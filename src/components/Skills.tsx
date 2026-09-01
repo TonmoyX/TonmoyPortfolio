@@ -17,6 +17,7 @@ import {
   SiReact,
   SiSublimetext,
   SiTailwindcss,
+  SiTypescript,
   SiVercel,
 } from "react-icons/si";
 import { DiCss3Full, DiHtml5, DiJava, DiVisualstudio } from "react-icons/di";
@@ -36,6 +37,7 @@ const CATEGORIES: { title: string; icon: IconType; skills: Skill[] }[] = [
       { name: "Java", Icon: DiJava, color: "#EA2D2E" },
       { name: "Python", Icon: SiPython, color: "#306998" },
       { name: "JavaScript", Icon: SiJavascript, color: "#F7DF1E" },
+      { name: "TypeScript", Icon: SiTypescript, color: "#3178C6" },
     ],
   },
   {

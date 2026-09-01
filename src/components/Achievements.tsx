@@ -7,6 +7,11 @@ import { StaggerContainer, StaggerItem } from "./motion/Stagger";
 
 const ACHIEVEMENTS = [
   {
+    image: "/images/PH_Certificate.png",
+    title: "Programming Hero",
+    description: "[Complete Web Development Course Certificate]",
+  },
+  {
     image: "/images/5th.jpg",
     title: "University Of Scholars (IUPC)",
     description: "[5th Intra University Programming Contest]",
@@ -39,7 +44,7 @@ export default function Achievements() {
     <section id="achievements" className="mt-1 px-2.5 py-6 md:py-10">
       <div className="mx-auto max-w-6xl px-2.5 py-2">
         <SectionTitle>Achievements</SectionTitle>
-        <StaggerContainer className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+        <StaggerContainer className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           {ACHIEVEMENTS.map((item) => (
             <StaggerItem key={item.title + item.image}>
               <div className="group relative flex h-full flex-col items-center overflow-hidden rounded-xl border border-border bg-panel/80 p-4 shadow-[0_2px_8px_rgba(0,0,0,0.2)] transition-all hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_10px_28px_rgba(66,153,225,0.2)] md:p-6">
